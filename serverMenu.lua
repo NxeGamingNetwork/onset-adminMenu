@@ -1,4 +1,3 @@
-local require = require("packages/TCS_Framework/userObject/userObject")
 
 AddRemoteEvent("adminMenu:isAdmin", function(player)
     if(tostring(userObj(player).getGroup()) == "admin") then -- MODIFY
