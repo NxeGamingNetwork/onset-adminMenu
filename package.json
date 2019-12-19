@@ -1,0 +1,16 @@
+{
+    "author": "https://github.com/AnthonyTCS",
+    "version": "1.0",
+    "client_scripts": [
+        "clientMenu.lua"
+    ],
+    "server_scripts": [
+        "serverMenu.lua"
+    ],
+    "files": [
+        "ui/css/style.css",
+        "ui/fonts/Poppins-Regular.woff2",
+        "ui/js/script.js",
+        "ui/ui.html"
+	]
+}

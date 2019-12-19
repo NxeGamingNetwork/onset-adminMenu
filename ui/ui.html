@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>adminMenu</title>
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <div class="wrap">
+            <div class="header">
+                <span class="idHeader">ID</span>
+                <span class="steamidHeader">steamID</span>
+                <span class="firstnameHeader">Nom</span>
+                <span class="lastnameHeader">Prénom</span>
+                <span class="pingHeader">Ping</span>
+            </div>
+            <div class="container">
+                <table class="players">
+                    <tr class="template row">
+                        <td class="id"></td>
+                        <td class="steamid"></td>
+                        <td class="firstname"></td>
+                        <td class="lastname"></td>
+                        <td class="ping"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="dropdown">
+            <ul class="droplist"></ul>
+        </div>
+        <script>
+        (function(obj)
+        {
+            ue.game = {};
+            ue.game.callevent = function(name, ...args)
+            {
+                if (typeof name != "string") {
+                    return;
+                }
+
+                if (args.length == 0) {
+                    obj.callevent(name, "")
+                }
+                else {
+                    let params = []
+                    for (let i = 0; i < args.length; i++) {
+                        params[i] = args[i];
+                    }
+                    obj.callevent(name, JSON.stringify(params));
+                }
+            };
+        })(ue.game);
+        CallEvent = ue.game.callevent;
+        </script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript" src="./js/script.js"></script>
+    </body>
+</html>
